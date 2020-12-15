@@ -21,9 +21,9 @@ export default function Header({}: Props): ReactElement {
         <IconButton edge="start" color="inherit" aria-label="menu">
           <MenuIcon />
         </IconButton>
-        <Button color="inherit">Tracking</Button>
-        <Button color="inherit">Cost Detail</Button>
-        <Button color="inherit">Summary Project</Button>
+        <Button color="inherit">I</Button>
+        <Button color="inherit">LUV</Button>
+        <Button color="inherit">U</Button>
       </Toolbar>
     </AppBar>
     )

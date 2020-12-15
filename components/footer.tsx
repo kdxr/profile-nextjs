@@ -7,7 +7,9 @@ interface Props {
 export default function Footer({}: Props): ReactElement {
     return (
         <div>
-            <b>This is Footer</b>
+            <p style={{textAlign : "center"}}>
+                <b>KDxR 2020</b>
+            </p>
         </div>
     )
 }
