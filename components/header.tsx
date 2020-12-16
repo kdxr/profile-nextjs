@@ -6,6 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { useDispatch, useSelector } from 'react-redux'
+import action from '../redux/actions'
+
 interface Props {
     
 }
@@ -13,8 +16,14 @@ interface Props {
 
 
 export default function Header({}: Props): ReactElement {
+    const authenReducer = useSelector(({authenReducer}) => authenReducer)
+    const dispatch = useDispatch()
 
-    
+    const Logout = () => {
+      console.log("LOGOUT")
+      dispatch(action.clear())
+    }
+
     return (
       <AppBar position="static">
       <Toolbar>
@@ -23,7 +32,7 @@ export default function Header({}: Props): ReactElement {
         </IconButton>
         <Button color="inherit">I</Button>
         <Button color="inherit">LUV</Button>
-        <Button color="inherit">U</Button>
+        <Button color="inherit" onClick={() => {Logout()}}>LOGOUT </Button>
       </Toolbar>
     </AppBar>
     )
